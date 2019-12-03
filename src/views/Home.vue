@@ -1,18 +1,19 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import PostUseCase from '@/domains/post/use-cases/post.use-case'
 
 export default {
   name: 'home',
-  components: {
-    HelloWorld
+  mounted () {
+    PostUseCase.getPosts()
+      .then((res) => res.json())
+      .then((res) => {
+        console.log(res)
+      })
   }
 }
 </script>
