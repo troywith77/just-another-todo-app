@@ -20,7 +20,6 @@ export default {
   },
   mounted () {
     PostUseCase.getPosts()
-      .then((res) => res.json())
       .then((res) => {
         console.log(res)
         this.posts = res

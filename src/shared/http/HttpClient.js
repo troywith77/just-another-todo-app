@@ -4,6 +4,7 @@ class HttpClient {
   }
   get (url) {
     return fetch(`${this._baseUrl}${url}`)
+      .then(res => res.json())
   }
 }
 

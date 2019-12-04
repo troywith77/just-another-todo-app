@@ -1,8 +1,6 @@
-export class Post {
-  constructor(post) {
-    this.id = post.id
-    this.userId = post.userId
-    this.title = todo.title
-    this.body = todo.body
-  }
-}
+export const create = () => ({
+  id: 0,
+  userId: 0,
+  title: '',
+  body: '',
+})
